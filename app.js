@@ -14,16 +14,16 @@ app.use(function(req, res, next){
 
 app.get('/', function(req, res, next){
   console.log("hello, im tired");
-  //res.status();
-  console.log(res.status());
-  res.send(""+res.status(200));
+  res.sendStatus(200);
+  //console.log(res.status());
+  // res.send(""+ 200 + "\n");
 })
 
-// app.post('/', function(req, res, next){
-//   console.log('posting something')
-//   res.send('Posted.')
-// });
-//
+app.post('/', function(req, res, next){
+  console.log('posting something')
+  res.send('Posted.')
+});
+
 // app.post('/', function(req, res, next){
 //   console.log('posting something')
 //   res.send('Posted.')
